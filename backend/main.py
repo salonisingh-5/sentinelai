@@ -3,13 +3,12 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from database import engine
 from models import Base
+from routes.alerts import router as alerts_router
 
 app = FastAPI()
 
-# Create all database tables
 Base.metadata.create_all(bind=engine)
 
-# Allow frontend requests
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -17,6 +16,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(alerts_router)
 
 @app.get("/")
 def home():
