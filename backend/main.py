@@ -6,6 +6,10 @@ from .models import Base
 
 from .routes.ai_routes import router as ai_router
 
+from database import engine
+from models import Base
+from routes.alerts import router as alerts_router
+
 app = FastAPI()
 
 Base.metadata.create_all(bind=engine)
@@ -24,3 +28,10 @@ app.include_router(ai_router)
 @app.get("/")
 def home():
     return {"message": "SentinelAI Backend Running"}
+
+app.include_router(alerts_router)
+
+@app.get("/")
+def home():
+    return {"message": "SentinelAI Backend Running"}
+

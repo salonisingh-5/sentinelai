@@ -1,6 +1,10 @@
 from fastapi import APIRouter
+
 from ..database import SessionLocal
 from ..models import Alert
+
+from database import SessionLocal
+from models import Alert
 
 router = APIRouter()
 
@@ -42,4 +46,8 @@ def create_alert(data: dict):
 
     return {
         "message": "Alert created successfully"
+
     }
+
+    }
+
