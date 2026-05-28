@@ -4,7 +4,8 @@
     "scenarios": 10,
     "logs_per_scenario": 10,
     "created_for": "SentinelAI Demo",
-    "description": "100 pre-labelled attack logs across 10 attack scenarios for simulate endpoint and DB seeding"
+    "description": "100 pre-labelled attack logs across 10 attack scenarios for simulate endpoint and DB seeding",
+    "generated_at": "2026-05-28T09:14:57.465983+00:00"
   },
   "logs": [
     {
@@ -251,7 +252,7 @@
       "source_ip": "10.0.0.5",
       "target_user": "N/A",
       "timestamp": "2025-05-27T03:02:00Z",
-      "pre_written_explanation": "CRITICAL: The server is connecting back to the attacker on port 4444. This confirms a successful reverse shell \u2014 the attacker now has remote code execution on the server.",
+      "pre_written_explanation": "CRITICAL: The server is connecting back to the attacker on port 4444. This confirms a successful reverse shell — the attacker now has remote code execution on the server.",
       "pre_written_mitigation": "Isolate server 10.0.0.5 from the network immediately. Block outbound traffic to 203.0.113.42 and begin forensic analysis."
     },
     {
@@ -270,7 +271,7 @@
     {
       "id": 21,
       "scenario": "privilege_escalation",
-      "log_text": "User 'www-data' executed sudo /bin/bash without prior authorisation on server-01",
+      "log_text": "User 'www-data' executed sudo /bin/bash without prior authorisation on server01",
       "threat_type": "privilege_escalation",
       "severity": "Critical",
       "severity_score": 9,
@@ -660,7 +661,7 @@
     {
       "id": 51,
       "scenario": "phishing",
-      "log_text": "Email gateway alert: suspicious email received by 42 users, sender: it-support@comp4ny.com (spoofed)",
+      "log_text": "Email gateway alert: suspicious email received by 42 users, sender: itsupport@comp4ny.com (spoofed)",
       "threat_type": "phishing",
       "severity": "Medium",
       "severity_score": 5,
@@ -849,7 +850,7 @@
       "source_ip": "45.33.32.156",
       "target_user": "N/A",
       "timestamp": "2025-05-27T10:01:30Z",
-      "pre_written_explanation": "The entire users table containing 15,000 records has been extracted. This data likely includes email addresses, usernames, and possibly hashed or plain-text passwords.",
+      "pre_written_explanation": "The entire users table containing 15,000 records has been extracted. This data likely includes email addresses, usernames, and possibly hashed or plaintext passwords.",
       "pre_written_mitigation": "Force password resets for all 15,000 affected accounts. Begin breach notification under applicable data protection regulations. Patch all injection vulnerabilities."
     },
     {
@@ -1154,7 +1155,7 @@
     {
       "id": 89,
       "scenario": "data_exfiltration",
-      "log_text": "Email exfiltration: 44 emails with attachments sent to external domain from no-reply@company.com",
+      "log_text": "Email exfiltration: 44 emails with attachments sent to external domain from noreply@company.com",
       "threat_type": "data_exfiltration",
       "severity": "High",
       "severity_score": 8,
